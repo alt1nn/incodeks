@@ -1,61 +1,79 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1>Incodeks Code Challenge</h1>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<p>This repository contains the solution for the Incodeks code challenge.</p>
 
-## About Laravel
+<h2>Setup Instructions</h2>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p>Follow these steps to run the project locally:</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<ol>
+  <li><strong>Clone the repository</strong>
+    <pre><code>git clone https://github.com/alt1nn/incodeks.git</code></pre>
+  </li>
+  
+  <li><strong>Navigate to the project folder</strong>
+    <pre><code>cd incodeks</code></pre>
+  </li>
+  
+  <li><strong>Install PHP dependencies</strong>
+    <pre><code>composer install</code></pre>
+  </li>
+  
+  <li><strong>Set up your environment</strong>
+    <ul>
+      <li>Create a <code>.env</code> file:
+        <pre><code>cp .env.example .env</code></pre>
+      </li>
+      <li>Configure your database and other environment variables inside the <code>.env</code> file.</li>
+    </ul>
+  </li>
+  
+  <li><strong>Generate application key</strong>
+    <pre><code>php artisan key:generate</code></pre>
+  </li>
+  
+  <li><strong>Run migrations and seeders</strong>
+    <pre><code>php artisan migrate --seed</code></pre>
+  </li>
+  
+  <li><strong>Start the local server</strong>
+    <pre><code>php artisan serve</code></pre>
+  </li>
+</ol>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<h2>API Documentation</h2>
 
-## Learning Laravel
+<p>You can find the API documentation on Postman:</p>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<p><a href="https://lively-resonance-405016.postman.co/workspace/altini~7bb3719c-f9cc-4bf5-b90c-fc088b459993/collection/26629119-ff3d5ba6-0662-4cc5-8249-d661cc64da80?action=share&creator=26629119" target="_blank">👉 Postman Collection Link</a></p>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+<h2>Setup Instructions</h2>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<ol>
+  <li>Clone the repository.</li>
+  <li>Run <code>composer install</code>.</li>
+  <li>Copy <code>.env.example</code> to <code>.env</code> and configure your database credentials.</li>
+  <li>Run <code>php artisan key:generate</code>.</li>
+  <li>Run <code>php artisan migrate --seed</code> to create and populate the database with initial data.</li>
+  <li>Start the development server with <code>php artisan serve</code>.</li>
+</ol>
 
-## Laravel Sponsors
+<h2>Postman Collection</h2>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+<p>You can test the API endpoints using the following Postman collection:</p>
+<p><a href="https://lively-resonance-405016.postman.co/workspace/altini~7bb3719c-f9cc-4bf5-b90c-fc088b459993/collection/26629119-ff3d5ba6-0662-4cc5-8249-d661cc64da80?action=share&creator=26629119" target="_blank">Click here to view Postman Collection</a></p>
 
-### Premium Partners
+<h2>Seeder Information</h2>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+<p>The seeder creates sample data for:</p>
+<ul>
+  <li><strong>Users:</strong> Admin and regular user accounts</li>
+  <li><strong>Venues:</strong> Two sample venues</li>
+  <li><strong>Events:</strong> Two events linked to users and venues</li>
+  <li><strong>Tickets:</strong> Two tickets booked by the regular user</li>
+</ul>
 
-## Contributing
+<p>After running <code>php artisan migrate --seed</code>, you will have initial data available to test the API endpoints immediately.</p>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<blockquote><strong>Note:</strong> Currently, the project includes endpoints for creating resources but does not cover updating or deleting.</blockquote>
